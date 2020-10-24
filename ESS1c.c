@@ -87,7 +87,7 @@ node* create_complaint(node* start_ptr)
 	printf("\nEnter Date in format dd/mm/yyyy: ");
 	scanf("%s\n",temp->date);
 	printf("\nComplaint Description:");
-	printf("( 1000 words maximum and without spaces!! ) \n");
+	printf("( 1000 words maximum !! ) \n");
 	scanf("%[^\n]s",temp->x);
 
 	printf("===========================================================================\n");
@@ -314,8 +314,8 @@ float ESIC(float ei) // Calculates the employee satisfaction index
 		E.q2=0;
 	if(E.q3<1)
 		E.q3=0;
-    float m=(E.q1+E.q2+E.q3)/3;
-    float esip=m/10;
+    float m=((E.q1+E.q2+E.q3)/3) - 1;
+    float esip=(m/9) * 100;
     ei=ei+esip;
     return ei;
 }
