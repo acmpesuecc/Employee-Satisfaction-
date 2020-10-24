@@ -51,8 +51,8 @@ node* employee_Complaint(node* start_ptr)	// This function is used to register a
 	printf("Enter Date in format dd/mm/yyyy: ");
 	scanf("%s",temp->date);
 	printf("Complaint Description:\n");
-	printf("( 1000 words maximum and without spaces !!) \n");
-	scanf("%s",temp->x);
+	printf("( 1000 words maximum !!) \n");
+	fgets(temp->x, 1000, stdin);
 
 	printf("===========================================================================\n");
     printf("Complaint added Successfully\n");
