@@ -15,7 +15,7 @@ int main()	// Main function
 	{
 	printf("\n");
     	printf("\t\t ================================================\n");
-	printf("\t\t|   Employee Satisfaction Application  |\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 	printf("\t\t ================================================\n\n\n");
 
 	printf("\t\t-------------------------------------------------\n");
@@ -28,15 +28,16 @@ int main()	// Main function
 	printf("\t\t|\t3. EXIT \t\t\t\t|\n");
 	printf("\t\t-------------------------------------------------\n\n");
 
-    	printf("\t\tInput number Associated with Your User Type: ");
-	scanf(" %c",&option);
+    	printf("\t\tInput number Associated with Your User Type:\n");
+		printf("\t\t\t\t\t");
+	scanf("%c",&option);
 	switch(option)
 	{
 		case '1':
 		{
 			printf("\n");
         	printf("\t\t ===================================================\n");
-		    printf("\t\t|   Employee Satisfaction Application    |\n");
+		    printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 		    printf("\t\t ===================================================\n\n\n");
 		    printf("\t\t--------------------------------------------------\n");
 			ei=ESIC(ei);
