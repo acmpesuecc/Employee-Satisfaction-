@@ -36,7 +36,7 @@ node* employee_Complaint(node* start_ptr)	// This function is used to register a
 {
 	printf("\n");
     printf("\t\t ================================================\n");
-	printf("\t\t|   Employee Satisfaction Application |\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 	printf("\t\t ================================================\n\n\n");
 	
     printf("\nAdd Your Complaint Details\n");
@@ -52,7 +52,7 @@ node* employee_Complaint(node* start_ptr)	// This function is used to register a
 	scanf("%s",temp->date);
 	printf("Complaint Description:\n");
 	printf("( 1000 words maximum and without spaces !!) \n");
-	scanf("%s",temp->x);
+	scanf("%[^\n]s",temp->x);
 
 	printf("===========================================================================\n");
     printf("Complaint added Successfully\n");
@@ -72,8 +72,8 @@ node* employee_Complaint(node* start_ptr)	// This function is used to register a
 node* create_complaint(node* start_ptr)
 {
 	printf("\n");
-    	printf("\t\t ================================================\n");
-	printf("\t\t|   Employee Satisfaction Application |\n");
+	printf("\t\t ================================================\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 	printf("\t\t ================================================\n\n\n");
 	printf("\nAdd Complaint Details of Customer\n");
 	printf("_____________________________________ \n\n");
@@ -117,7 +117,7 @@ void view_complaint(node* start_ptr) // Lists out the complaints in an ordered f
 	found = 0;
 	printf("\n");
     printf("\t\t ================================================\n");
-	printf("\t\t|   Employee Satisfaction Application |\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 	printf("\t\t ================================================\n\n\n");
 	printf(" Enter the Complaint Number To Look into The Complaint Details\n");
 	scanf("%d",&num);   // Choosing a specific complaint based on numbered priority
@@ -174,8 +174,8 @@ node* cancel_complaint(node* start_ptr) // Removes a certain complaint from the 
 
 	int num, count;
 	printf("\n");
-    	printf("\t\t ================================================\n");
-	printf("\t\t|   Employee Satisfaction Application |\n");
+    printf("\t\t ================================================\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
 	printf("\t\t ================================================\n\n\n");
     	printf("Enter the Complaint number you want to delete \n");
     	scanf("%d",&num);
@@ -240,8 +240,8 @@ node* update_complaint(node* start_ptr)// Used to update complaint details if an
  temp = start_ptr;
  printf("\n");
  printf("\t\t ================================================\n");
- printf("\t\t|   Employee Satisfaction Application |\n");
- printf("\t\t ================================================\n\n\n");
+	printf("\t\t|\tEmployee Satisfaction Application\t|\n");
+	printf("\t\t ================================================\n\n\n");
  printf("Enter Complaint Number To Update: ");
  scanf("%d",&sid);
  if(temp==NULL && sid==0)
@@ -294,12 +294,15 @@ return start_ptr;
 float ESIC(float ei) // Calculates the employee satisfaction index
 {
     struct ESI E;
-    printf("Answer These Quick Three Questions TO help us understand your satisfaction with our services!\n");
-    printf("Answer All These 3 Questions on a scale from 1-10 \n");
+    printf("Answer These Quick Three Questions TO help us understand your satisfaction with our services!\n\n");
+    printf("Answer All These 3 Questions on a scale from 1-10 \n\n");
+	printf("--------------------------------------------------------\n");
     printf("How satisfied are you with your current workplace? \n");
     scanf("%d",&E.q1);
+	printf("\n");
     printf("How well does your current workplace meet your expectations? \n");
     scanf("%d",&E.q2);
+	printf("\n");
     printf("How close is your current workplace to the ideal one? \n");
     scanf("%d",&E.q3);
 	if(E.q1>10)
@@ -327,14 +330,14 @@ node* admin_menu(node* start_ptr,float ei,int cou) // Opens up the administrator
     	do
 	    {
         	printf("\n");
-        	printf("\t\t ===================================================\n");
-		    printf("\t\t|   Employee Satisfaction Application    |\n");
-		    printf("\t\t ===================================================\n\n\n");
+        	printf("\t\t ================================================\n");
+			printf("\t\t|\tEmployee Satisfaction Application\t|\n");
+			printf("\t\t ================================================\n\n\n");
 		    printf("\t\t--------------------------------------------------\n");
 		    printf("\t\t||\t1. Create a Complaint \t\t\t ||\n");
 		    printf("\t\t||\t2. View Complaint\t\t\t ||\n");
 		    printf("\t\t||\t3. Update Complaint Status \t\t ||\n");
-		    printf("\t\t||\t4. Print the Employee Satisfaction Index \t\t\t ||\n");
+		    printf("\t\t||\t4. Print the Employee Satisfaction Index ||\n");
 		    printf("\t\t||\t5. Cancel a Complaint \t\t\t ||\n");
 		    printf("\t\t||\t6. Logout\t\t\t\t ||\n");
 		    printf("\t\t--------------------------------------------------\n");
@@ -347,9 +350,9 @@ node* admin_menu(node* start_ptr,float ei,int cou) // Opens up the administrator
 			    case '1':         // Shows the esi rating
 			    {
 					printf("\n");
-        			printf("\t\t ===================================================\n");
-		    		printf("\t\t|   Employee Satisfaction Application    |\n");
-		    		printf("\t\t ===================================================\n\n\n");
+        			printf("\t\t ================================================\n");
+					printf("\t\t|\tEmployee Satisfaction Application\t|\n");
+					printf("\t\t ================================================\n\n\n");
 		    		printf("\t\t--------------------------------------------------\n");
 					ei=ESIC(ei);
 				    start_ptr=employee_Complaint(start_ptr);
@@ -405,6 +408,7 @@ node* admin_menu(node* start_ptr,float ei,int cou) // Opens up the administrator
 		}//end Switch
 		
 		}while(menu!='6'); //end the do loop
+		printf("\t\t--------------------------------------------------\n");
 		printf("thank you");
 		return start_ptr;
 	}
