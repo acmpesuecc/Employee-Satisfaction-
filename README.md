@@ -10,3 +10,5 @@ The program consists of 2 types of access,
 ## The Program
 The program uses simple data structures in C with linked lists being primarily used. 
 It is Begginer friendly so feel free to make as many changes as can be made!
+
+### Thanks Everyone for your contributions during HackNight! Appriciate it!!
