@@ -247,7 +247,7 @@ node* update_complaint(node* start_ptr)// Used to update complaint details if an
  scanf("%d",&sid);
  if(temp==NULL && sid==0)
  {
-    printf("No Complaint To Update..!");
+    printf("No Complaint To Left to Update.!Thanks !! ");
  }
 
  else

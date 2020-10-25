@@ -65,7 +65,8 @@ int main()	// Main function
 	}
 	
 	}while(option!='3');//end do
-		printf("thank you");
+		printf("Thank You");
+		//This was fun!!
 		//system ("PAUSE");
 
 }//end  main function
